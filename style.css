@@ -1,0 +1,116 @@
+body{
+    background-color: #f4a5ae;
+    color:#A8577E;
+    font-family: 'Judson', serif; 
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+}
+ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+}
+ul a{
+    display: block;
+    color: white;
+    padding: 16px;
+    background color: #dddddd;
+    font-size:18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: left;
+}
+li a:hover{
+    background-color: #555;
+    color: white;
+} 
+li a.active{
+    background-color: #a8577e;
+    color: white;
+}
+h1{
+    text-transform: uppercase;
+}
+.grow{
+    transition: all .2s ease-in-out;
+}
+.grow:hover{
+    transform: scale(1.1); 
+}
+.shrink{
+    transition: all .2s ease-in-out;
+}
+.shrink:hover{
+    transform: scale(0.98);
+}
+.pulse:hover{
+    animation: pulsate 0.5s;
+    animation-iteration-count: infinite; 
+} 
+.ring:hover{
+    animation: shake 0.8s; 
+    animation-iteration-count: infinite; 
+}
+.draw:hover{
+    animation: draw 0.5s; 
+    animation-iteration-count: infinite; 
+}
+@keyframes shake{
+    0% { transform:rotate(0deg); }
+  10% { transform:  rotate(-3deg); }
+  20% { transform: rotate(3deg); }
+  30% { transform: rotate(0deg); }
+  40% { transform: rotate(3deg); }
+  50% { transform: rotate(-3deg); }
+  60% { transform: rotate(0deg); }
+  70% { transform: rotate(-3deg); }
+  80% { transform:  rotate(3deg); }
+  90% { transform: rotate(0deg); }
+  100% { transform: rotate(-3deg); }
+}
+@keyframes draw{
+    0% { transform: translate(0px,0px)rotate(2deg); }
+  20% { transform:  translate(0px,1px)rotate(2deg); }
+  40% { transform:  translate(0px,2px)rotate(3deg); }
+  60% { transform:  translate(0px,1px)rotate(2deg); }
+  80% { transform:  translate(0px,0px)rotate(2deg); }
+  100% { transform: translate(0px,0px)rotate(3deg); }
+}
+@keyframes pulsate{
+    0% { transform:scale(1.1);}
+   10% { transform:scale(1.0);} 
+   20% { transform:scale(1.0);}
+   30% { transform:scale(1.0);}
+   40% { transform:scale(1.0);}
+   50% { transform:scale(1.1);} 
+   60% { transform:scale(1.0);}
+   70% { transform:scale(1.0);} 
+   80% { transform:scale(1.0);} 
+   90% { transform:scale(1.0);}
+  100% { transform:scale(1.0);} 
+}
+
+@media only screen and (max-width: 600px){
+    li a {
+        color: white;
+        padding: 8px 30px;
+        float: none;
+        /*padding: 8px 30px;*/
+    }
+    li{
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 600px){
+    li a {
+        color: white;
+        padding: 8px 30px;
+        /*text-align: center;*/
+    }
+    .about{
+        float:right;
+    }
+}
